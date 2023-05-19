@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #d1d1c6;
+    
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  thead tr {
+  background-image: linear-gradient(to right,  rgb(99, 166, 5) , rgb(16, 124, 16) , rgb(99, 166, 5) , rgb(16, 124, 16) , rgb(99, 166, 5) , rgb(16, 124, 16) , rgb(99, 166, 5) , rgb(16, 124, 16));
+  }
+  
+  tr:nth-child(even) {
+    background-color: #6ab4c4;
+  }
+
+  #addListItem{
+    border-radius: 50px 250px;
+    background-image: linear-gradient(to right, rgb(7, 234, 49) , rgb(255, 111, 0) , rgb(7, 234, 49));
+    background-position: center;
+    font-size: 90%;
+    text-align:center;
+    border: 2px solid black;
+    margin: 12px;
+  }
+
+  h2{
+    border-radius: 50px 250px;
+    background-image: linear-gradient(to right, rgb(40, 241, 204) , yellow , rgb(40, 241, 204));
+    background-position: center;
+    font-size: 150%;
+    text-align:center;
+    border: 2px solid black;
+    margin: 12px;
+  }
+
+  h3{
+    border-radius: 50px 250px;
+    background-image: linear-gradient(to right, rgb(40, 241, 204) , yellow , rgb(40, 241, 204));
+    background-position: center;
+    font-size: 150%;
+    text-align:center;
+    border: 2px solid black;
+    margin: 12px;
+  }

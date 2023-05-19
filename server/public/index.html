@@ -5,11 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Do Your Stuff Homie</title>
     <script src="jquery.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-    
+    <section id="addListItem">
+        <h3>Add A Task</h3>
+        <input type="text" id="nameIn" value="" placeholder="Name">
+        <input type="text" id="taskIn" value="" placeholder="To Do List Item">
+        <input type="text" id="completeIn" value="" placeholder="Complete: yes or no">
+        <button type="button" id="addButton">Add Task</button>
+    </section>
+    <section>
+        <h2>All Tasks</h2>
+      <table id="taskTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Task</th>
+            <th>Complete?</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="viewList">
+        </tbody>
+      </table>
+    </section>
 </body>
 </html>
