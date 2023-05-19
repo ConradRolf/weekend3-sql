@@ -22,13 +22,13 @@ function getList(){
             <tr data-id=${response[i].id}>
                 <td>${response[i].name}</td>
                 <td>${response[i].task}</td>
-                <td>${response[i].complete} <button id="complete-btn">Finished?</button></td>
+                <td><button id="complete-btn">Finished?</button></td>
                 <td><button id="delete-btn">Giving up?</button></td>
             </tr>
             `);
             else if (response[i].complete === 'yes')
             $('#viewList').append(`
-            <tr data-id=${response[i].id}>
+            <tr data-id=${response[i].id} class="green">
                 <td>${response[i].name}</td>
                 <td>${response[i].task}</td>
                 <td>✅</td>
