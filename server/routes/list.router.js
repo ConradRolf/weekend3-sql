@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 // GET
-
+// The get will take in all the values form the database and send them back to the function in the script/client
 router.get('/', (req, res) => {
     let queryText = 'SELECT * FROM "task-list";';
     pool.query(queryText)
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 // POST
-
+// The post will take values sent by the function and store them in the data base
 router.post('/', (req, res) => {
     let newTask = req.body;
     console.log('req.body:', req.body);
@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT
-
+// The put targets the id of the row that was clicked on in the DoM and updates its value to be marked off as complete
 router.put('/:id', (req, res) => {
     let idToUpdate = req.params.id;
     
@@ -59,7 +59,7 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE
-
+// The delete will target the id of the row that was clicked on and delete it from the server
 router.delete('/:id', (req, res) => {
     let taskToDelete = req.params.id;
     let queryText = 'DELETE FROM "task-list" WHERE "id"=$1';

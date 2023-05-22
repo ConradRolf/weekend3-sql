@@ -1,5 +1,6 @@
 $(document).ready(onReady);
 
+// setting up click listeners and functions to run when the document is ready
 function onReady() {
     console.log('We have jQuery! 💲💲💲');
     getList();
@@ -8,6 +9,8 @@ function onReady() {
     $('#viewList').on('click', '#complete-btn', updateTask)
 }
 
+// function to get the items from the server using a GET request and render them to the DoM using a conditional based
+// on whether or not the task has been complete
 function getList(){
     $('#viewList').empty();
     console.log( 'in getList' );
@@ -40,6 +43,7 @@ function getList(){
     console.log('Error', error);
 })}
 
+// a function that takes user inputs from the DoM and POSTs them to the server and then resets the input fields
 function postList(event) {
     event.preventDefault();
     let taskToSend = {
@@ -59,6 +63,7 @@ function postList(event) {
     });
 };
 
+// A function that updates a task using the PUT method to mark it off as complete on the DoM and updates it on the server
 function updateTask(event){
     event.preventDefault();
     console.log('Task complete')
@@ -75,6 +80,7 @@ function updateTask(event){
     })
 }
 
+// a function to delete a task using the DELETE method, it will remove it from the data base and the DoM
 function deleteTask(event){
     event.preventDefault();
     const taskToDelete = $(this).closest('tr').data('id');
